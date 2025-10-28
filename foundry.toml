@@ -2,5 +2,20 @@
 src = "src"
 out = "out"
 libs = ["lib"]
+extra_output = ["storageLayout"]
 
-# See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
+[profile.fuzzing]
+src = 'test/fuzzing'
+test = 'test/fuzzing'
+script = 'test/fuzzing'
+ignored_error_codes = [3420,3628,2072,2018,6321,5667,5574,3860]
+
+[invariant]
+runs = 500000000
+depth = 100
+shrink_run_limit = 100000
+include_storage = true
+show_solidity = true
+show_metrics = true
+# fail_on_revert = true
+corpus_dir = "foundry-corpus"

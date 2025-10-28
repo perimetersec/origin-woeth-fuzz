@@ -6,6 +6,7 @@ medusa-corpus/
 medusa-logs/
 slither
 slither_results.json
+foundry-corpus/
 
 # Compiler files
 cache/
