@@ -101,10 +101,6 @@ contract FoundryFuzzing is Fuzz, Test {
 
         // Test that totalAssets never reverts
         handler_totalAssetsNeverReverts();
-
-        // Heavy invariants (optional, uncomment to enable):
-        // handler_testSolvability(); // Tests all users can withdraw
-        // handler_testRedeemSumVsTotalAssets(); // Sum of redeems equals total assets
     }
 
     /**
